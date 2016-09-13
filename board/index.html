@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+            @font-face { font-family: "Alp Ekran";font-weight:normal;src: url('AlpEkran.eot'); /* IE */
+                src: local("Alp Ekran"),local("Alpida Unicode System"), local("Alp Ekran"),url("AlpEkran.ttf") format("TrueType"); }/* non-IE */
+            @font-face {font-family: 'Alp Ekran'; src: url('AlpEkran.eot?') format('embedded-opentype'), url('AlpEkran.ttf') format('truetype') }
+            @font-face{font-family:"Alp Ekran";font-weight:normal;src:url('AlpEkran.eot');  src:local("Alp Ekran"),url("AlpEkran.ttf") format("TrueType");}
+			body{
+				margin: 0;
+				padding: 0;
+				background: #F9F9F9;
+	            font-family:Alp Ekran, Exo,'-apple-system','Open Sans',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue','Hiragino Sans GB','Microsoft YaHei',Helvetica,Arial,sans-serif;
+            }
+			.frame{
+				width: 960px;
+			    height: 620px;
+			    margin: 0 auto;
+			    margin-top: 20px;
+			}
+			.left{
+				width: 50px;
+			    height: 620px;
+			    background: #2F2D2D;
+			    float: left;
+			    border-top-left-radius: 20px;
+			    border-bottom-left-radius: 20px;
+			}
+			.left span{
+			    display: block;
+			    width: 10px;
+			    height: 10px;
+			    background: #606060;
+			    margin: 0 auto;
+			    border-radius: 100%;
+			    margin-top: 305px;
+			}
+			.center{
+			    width: 850px;
+			    height: 560px;
+			    background: #0E0E0E;
+			    border: 30px solid #2F2D2D;
+			    border-left: none;
+			    border-right: none;
+			    float: left;
+			}
+			.right{
+				width: 60px;
+			    height: 620px;
+			    background: #2F2D2D;
+			    float: left;
+			    	border-top-right-radius: 20px;
+			    border-bottom-right-radius: 20px;
+			}
+			.right span{
+			    display: block;
+			    width: 30px;
+			    height: 30px;
+			    background: #606060;
+			    margin: 0 auto;
+			    border-radius: 100%;
+			    margin-top: 295px;	
+			    box-shadow: 0px 0px 3px #F9F9F9 inset;
+			}
+			.menus{
+
+				width:850px;
+				height:60px ;
+			    background: rgba(255, 255, 255, 0.03);
+			}
+
+			#canvas{
+				background:#0E0E0E;
+			}
+			.xin{
+			    color: #606060;
+			    margin-top: 19px;
+			    float: right;
+			    margin-right: 20px;
+			    font-family: Alp Ekran;
+			    font-size: 13px;
+			}
+			#shv{
+			    border: none;
+			    outline: none;
+			    float: right;
+			    margin-top: 21px;
+			    margin-right: 10px;
+			    width: 13px;
+			    background: none;
+			    color: white;
+			}
+			.range{
+			    float: right;
+			    margin-top: 20px;
+			    margin-right: 5px;
+                direction: rtl;
+			}
+			.color{
+			    width: 9px;
+			    height: 9px;
+			    background: red;
+			    display: block;
+			    float: right;
+			    margin-right: 4px;
+			    margin-top: 21px;
+			    border-radius: 100%;
+			    border: 3px solid #D4D4D4;
+			    cursor: pointer;
+			}
+			.bgcolor{
+			    width: 9px;
+			    height: 9px;
+			    background: red;
+			    display: block;
+			    float: right;
+			    margin-right: 4px;
+			    margin-top: 21px;
+			    border-radius: 100%;
+			    border: 3px solid #D4D4D4;
+			    cursor: pointer;
+			}
+			.con_but{
+			    padding: 0px 10px 0px 10px;
+			    color: #C5C5C5;
+			    border: 1px solid #C5C5C5;
+			    font-size: 11px;
+			    border-radius: 25px;
+			    margin-top: 20px;
+			    float: right;
+			    margin-right: 25px;
+			    text-align: center;
+			    line-height: 13px;
+			    cursor: pointer;
+			    height: 15px;
+			    display: block;
+			    font-family:  Alp Ekran;
+			}
+			.all_clear{
+			    padding: 0px 10px 0px 10px;
+			    color: #C5C5C5;
+			    border: 1px solid #C5C5C5;
+			    font-size: 11px;
+			    border-radius: 25px;
+			    margin-top: 20px;
+			    float: right;
+			    margin-right: 25px;
+			    text-align: center;
+			    line-height: 13px;
+			    cursor: pointer;
+			    height: 15px;
+			    display: block;
+			    font-family: Alp Ekran;
+			}
+			.dow{
+			    padding: 0px 10px 0px 10px;
+			    color: #C5C5C5;
+			    border: 1px solid #C5C5C5;
+			    font-size: 11px;
+			    border-radius: 25px;
+			    margin-top: 20px;
+			    float: right;
+			    margin-right: 25px;
+			    text-align: center;
+			    line-height: 15px;
+			    cursor: pointer;
+			    height: 15px;
+			    display: block;
+			    font-family: Alp Ekran;
+			}
+		</style>
+		<script src="jquery.min.js"></script>
+	</head>
+	<body ncontextmenu="return false" onSelectStart="return false">
+		<div class="frame">
+			<div class="left">
+				<span></span>
+			</div>
+			<div class="center">
+				<div class="menus">
+					<span class="xin">سىزنىق كەڭلىكى</span>
+					<input type="text" name="shv" id="shv" disabled="disabled" value="5" />
+					<input type="range" class="range" value="5" name="range" min="1" max="20" step="1">
+					<span class="xin">سىزىق رەڭگى</span>
+					<span class="color" color="#fa6041" style="background:#fa6041;"></span>
+					<span class="color" color="#00a57f" style="background:#00a57f;"></span>
+					<span class="color" color="#26ba60" style="background:#26ba60;"></span>
+					<span class="color" color="#F29225" style="background:#F29225;"></span>
+					<span class="color" color="#28BAF9" style="background:#28BAF9;"></span>
+					<span class="color" color="white" style="background:white;"></span>
+					<span class="xin">تاختا رەڭگى</span>
+					<span class="bgcolor" color="#0E0E0E" style="background:#0E0E0E;"></span>
+					<span class="bgcolor" color="#FFFFFF" style="background:#FFFFFF;"></span>
+					<span class="bgcolor" color="#909090" style="background:#909090;"></span>
+					<span class="bgcolor" color="url(taglik1.png)" style="background:#F55A73;"></span>
+					<span class="con_but">ئۆچۈرگۈچ</span>
+					<span class="all_clear">تولۇق ئۆچۈرۈش</span>
+					<!--<span class="dow">چۈشۈرۈش</span>-->
+					<img id="hid_pic" src="" alt="" style="display: none;" />
+				</div>
+				<canvas id="canvas" width="850" height="500" background="#0E0E0E"></canvas>
+				
+			</div>
+			<div class="right">
+				<span></span>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+        //创建对象
+        //obikitlaxturwilix
+		var blackBoard=function(){
+			//赋值给一个变量，为了将来到处可以用this
+            //hamam yarda this ni ixlitix uqun bir uzgarguqi mikdar myThis qa sakliwalimiz
+			var myThis=this;
+			//原生对象
+            //canvas obikit
+			myThis.myEle=document.getElementById("canvas");
+			//画布对象
+            //tahta obikit
+			myThis.myCtx=this.myEle.getContext("2d");
+			//设置默认线条颜色
+            //sizik ranggining ozhal kimmiti
+			myThis.myLineColor="#fa6041";
+			//线条默认宽度
+            //sizik kanglikining ozhal kimmiti
+			myThis.myLineWidth=5;
+			//运行方法
+            //maxkulat jaryani
+			myThis.myRun=function(){
+				//当鼠标按下的时候
+                //mausni bakanda
+				$(myThis.myEle).mousedown(function(e){
+					//初始化路径
+                    //yigi linya tayyarlax
+					myThis.myCtx.beginPath();
+					//设置线条颜色
+                    //sizik ranggini bikitix
+					myThis.myCtx.strokeStyle=myThis.myLineColor;
+					//设置线条宽度
+                    //sizik kanglikini bikitix
+					myThis.myCtx.lineWidth=myThis.myLineWidth;
+					//设置起点
+                    //bxlinix nuktisni bikitix
+					myThis.myCtx.moveTo(e.clientX-$(this).position().left,e.clientY-$(this).position().top);
+					//移动鼠标
+                    //masusni yotkiganda
+					$(this).mousemove(function(e){
+						myThis.myCtx.lineTo(e.clientX-$(this).position().left,e.clientY-$(this).position().top);
+						myThis.myCtx.stroke();
+					})
+					
+				})
+				
+				//鼠标抬起
+                //masni koyup barganda
+				$(document).mouseup(function(){
+					//解绑鼠标移动
+                    //ahirlaxturux
+					$(myThis.myEle).unbind("mousemove");
+				})
+			}
+
+		}
+		
+		//实例化
+        //amalilaxturux
+		var obj=new blackBoard();
+		obj.myRun();
+		
+			//拖动改变先大小
+            //surup sizikning kaglikini ozgartix
+			$('.range').change(function(){
+				$("#shv").val($(this).val());
+				obj.myLineWidth = $(this).val();
+			})
+			
+			//点击改变线条颜色
+            //sizik ranggini ozgartix
+			$(".color").click(function(){
+                var color=$(this).attr("color");
+				obj.myLineColor=color;
+                $(this).css({borderColor:color}).siblings('.color').css({borderColor:"#D4D4D4"});
+			});
+			
+			//点击改变背景颜色
+            //kayni taglik ranggini ozgartix
+			$(".bgcolor").click(function(){
+				var color=$(this).attr("color");
+				$("#canvas").css({background:color});
+				$("#canvas").attr("background",color);
+                $(this).css({borderColor:color}).siblings('.bgcolor').css({borderColor:"#D4D4D4"});
+			});
+			
+			//橡皮擦
+            //uqurgux
+			$(".con_but").click(function(){
+				obj.myLineColor=$("#canvas").attr("background");
+			});
+			
+			//一键擦除
+            //hammini uqurux
+			$(".all_clear").click(function(){
+				obj.myCtx.clearRect(0,0,850,500);
+			});
+
+		
+		</script>
+	</body>
+</html>
